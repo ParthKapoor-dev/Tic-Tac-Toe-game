@@ -11,14 +11,12 @@
 .main-game-container{
     margin-top:90px;
     margin-left:38%;
-}
-.onlyObjects{
-    height: fit-content;
-    width: fit-content;
+    width:310px;
+    height:310px;
 }
 .element-1-1,.element-1-2,.element-1-3,.element-2-1,.element-2-2,.element-2-3,.element-3-1,.element-3-2,.element-3-3{
-    background-color: blue;
-    border:2px solid black;
+    background-color: rgb(31, 235, 140);
+    border:2px solid white;
     width:100px;
     height: 100px;
     transition:0.5s;
@@ -36,6 +34,13 @@
 
 .element-1-1:hover,.element-1-2:hover,.element-1-3:hover,.element-2-1:hover,.element-2-2:hover,.element-2-3:hover,.element-3-1:hover,.element-3-2:hover,.element-3-3:hover{
     background-color: white;
-    border:2px solid blue;
+    border:2px solid rgb(31, 235, 140);
     cursor:pointer;
+}
+
+.restart{
+    font-size: 40px;
+    margin-top:20px;
+    border-radius:20px;
+    margin-left:20%;
 }
