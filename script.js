@@ -11,6 +11,7 @@ const element33 = document.querySelector(".element-3-3");
 const allElements = document.querySelectorAll(".ele");
 const container = document.querySelector(".main-game-container");
 const restart = document.querySelector(".restart");
+const results = document.querySelector(".results");
 let objectClicked = {
     "element-11": "A",
     "element-12": "A",
@@ -150,3 +151,9 @@ element33.addEventListener("click",(e)=>{
     console.log(objectClicked);
     O(objectClicked);
 })
+
+if(objectClicked["element-11"] == "X" && objectClicked["element-12"] == "X" && objectClicked["element-13"] == "X" )
+{
+    results.innerText = "You Won the game";
+}
+// A promise comprises of a function that will work when called 

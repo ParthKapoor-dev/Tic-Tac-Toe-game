@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+*{
+    font-family: 'Roboto Condensed';
+}
 .introduction{
     display:flex;
     justify-content: center;
@@ -9,7 +15,7 @@
 }
 
 .main-game-container{
-    margin-top:90px;
+    margin-top:30px;
     margin-left:38%;
     width:310px;
     height:310px;
@@ -43,4 +49,18 @@
     margin-top:20px;
     border-radius:20px;
     margin-left:20%;
+    margin-bottom: 50px;
+}
+.current-turn{
+    margin-top:20px;
+    margin-left: 40%;
+    font-size : 50px;
+}
+.results{
+    font-size:38.9px;
+    margin-top: 20px;
+}
+.guide{
+    margin-left: 37%;
+    color:blue;
 }
