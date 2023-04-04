@@ -15,7 +15,12 @@ const container = document.querySelector(".main-game-container");
 const restart = document.querySelector(".restart");
 const results = document.querySelector(".results");
 const currentTurn = document.querySelector(".current-turn")
+const xWon = document.querySelector(".x2")
+const oWon = document.querySelector(".O2")
 
+x=0;o=0;
+xWon.innerText = `${x}`;
+oWon.innerText = `${o}`;
 gameActive = 1;
 arr = ['0','0','0','0','0','0','0','0','0'];
 currentPlayer = 'X';
@@ -105,7 +110,40 @@ function winner()
         results.innerText = `${winner} is the winner`;
         currentTurn.innerText = "Game Over fellas";
         gameActive = 0;
+        if(currentPlayer == "X") {
+            x++;
+            const previousScore = JSON.parse(window.localStorage.getItem('scores'));
+            previousScore.x++;
+            window.localStorage.setItem('scores', JSON.stringify(previousScore));
+        }
+        else {
+            o++;
+            const previousScore = JSON.parse(window.localStorage.getItem('scores'));
+            previousScore.y++;
+            window.localStorage.setItem('scores', JSON.stringify(previousScore));
+        }
+        // xWon.innerText = `${x}`;
+        // oWon.innerText = `${o}`;
+        xWon.innerText = JSON.parse(window.localStorage.getItem('scores')).x;
+        oWon.innerText = JSON.parse(window.localStorage.getItem('scores')).y;
+    }
+}
 
+
+const initialPageLoad = () => {
+    const scores = JSON.parse(window.localStorage.getItem('scores'));
+    if (!scores) {
+        let initialScore = {
+            x: 0,
+            y: 0
+        }
+        window.localStorage.setItem('scores', JSON.stringify(initialScore));
+        xWon.innerText = 0;
+        oWon.innerText = 0;
+    }
+    else {
+        xWon.innerText = scores.x;
+        oWon.innerText = scores.y;
     }
 }
 
